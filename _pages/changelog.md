@@ -51,19 +51,26 @@ ________
 
 ### `Initial Release`
 # **25.35.0**
-The very first version of Drawwii is now live! Enjoy a simple and intuitive drawing experience that lets anyone express their creativity with ease. We’re just getting started—your feedback will help make Drawwii even better. Start drawing, saving, and building your own creative gallery! 🎨
+Drawwii is a simple yet creative drawing app designed for everyone.  
+Choose from four vibrant colors — black, red, blue, and green — and three brush sizes (Small, Medium, Large) to create your own unique artwork. Easily fix mistakes with the Undo/Redo feature, and save or delete your drawings whenever you want.  
+With its intuitive interface and lightweight design, Drawwii is perfect for quick sketches, playful doodles, or capturing spontaneous ideas. Unleash your creativity and start drawing with Drawwii today!
 
-#### What's New
+[//]: # (#### What's New)
 
-- Draw using black, red, blue, and green colors
+[//]: # ()
+[//]: # (- Draw using black, red, blue, and green colors)
 
-- Choose from Small / Medium / Large brush sizes
+[//]: # ()
+[//]: # (- Choose from Small / Medium / Large brush sizes)
 
-- Supports Undo / Redo actions
+[//]: # ()
+[//]: # (- Supports Undo / Redo actions)
 
-- Save and delete your drawings
+[//]: # ()
+[//]: # (- Save and delete your drawings)
 
-- User-friendly interface
+[//]: # ()
+[//]: # (- User-friendly interface)
 
 <br>
 
