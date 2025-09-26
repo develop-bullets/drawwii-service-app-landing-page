@@ -11,7 +11,7 @@ include_in_header: false
 [//]: # (<br>)
 
 ### `Latest`
-# **Version 25.38.0**
+# **25.38.0**
 Enjoy a safer experience! A confirmation dialog now appears before deleting all drawings, helping you avoid accidental data loss.
 
 #### What's New
