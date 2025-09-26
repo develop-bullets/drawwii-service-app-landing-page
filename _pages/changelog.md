@@ -10,39 +10,12 @@ include_in_header: false
 
 [//]: # (<br>)
 
-[//]: # (### `Latest`)
+### `Latest`
+# **Version 25.38.0**
+Enjoy a safer experience! A confirmation dialog now appears before deleting all drawings, helping you avoid accidental data loss.
 
-[//]: # (# **Version 2.0**)
-
-[//]: # (This is the first update to our app. Jeez **goodness** by kept more sensually a much far proper exotically precise [here is a link]&#40;https://www.google.com&#41; and and illicit hey uninspiring the more sat honey knelt before before bearish bowed lorikeet wolf grandly instead diligently and rhinoceros imperative.)
-
-[//]: # ()
-[//]: # (#### What's New)
-
-[//]: # (- Much far proper exotically precise unaccountable.)
-
-[//]: # (- [Changes to Privacy Policy]&#40;/privacypolicy&#41;)
-
-[//]: # ()
-[//]: # (#### Bug Fixes)
-
-[//]: # (- Much far proper exotically precise unaccountable.)
-
-[//]: # (- [Changes to Privacy Policy]&#40;/privacypolicy&#41;)
-
-[//]: # ()
-[//]: # (<br>)
-
-[//]: # (### **Version 2.1**)
-
-[//]: # (Abnormal and formidable against much the before well improper more spent far heron amicably iguana plainly swanky upon mammoth **much paid darn some tapir** some glared save crud more regarding one accommodating gosh cannily and on hungry a more goodness inside merry yikes wedded versus because some a a a shined anteater goldfinch jeez up so and this this a.)
-
-[//]: # ()
-[//]: # (#### What's New)
-
-[//]: # (- Much far proper exotically precise unaccountable.)
-
-[//]: # (- Much far proper exotically precise unaccountable.)
+#### What's New
+- Added confirmation before deleting all drawings.
 
 <br>
 
