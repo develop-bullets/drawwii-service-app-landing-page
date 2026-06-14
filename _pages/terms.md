@@ -6,7 +6,7 @@ include_in_header: false
 
 # Terms of Use
 
-Last updated: September 29, 2025
+Last updated: June 14, 2026
 
 Thank you for choosing Drawwii, owned by Bullets ("we", "us", "our"). Please read these Terms of Service ("Terms") carefully before using the Drawwii mobile application ("Service"). By accessing or using our Service, you agree to be bound by these Terms.
 
@@ -20,7 +20,7 @@ We may modify these Terms at any time, and such modifications will be effective 
 
 ### 3. Privacy and Data Collection
 
-We respect the privacy of our users. We collect telemetry information for the purposes of improving our product for our users. This data is collected through third-party services including Firebase Analytics, Crashlytics, Sentry, and Mixpanel. For more information, please refer to our Privacy Policy.
+We respect the privacy of our users. We collect telemetry information for the purposes of improving our product for our users. This data is collected through third-party services including Firebase Analytics, Sentry, and Mixpanel. For more information, please refer to our Privacy Policy.
 
 ### 4. Limitations of Liability
 

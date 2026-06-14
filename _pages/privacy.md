@@ -6,13 +6,13 @@ include_in_header: false
 
 # Privacy Policy
 
-Last updated: September 29, 2025
+Last updated: June 14, 2026
 
 At Drawwii, owned by Bullets, we value your privacy. This Privacy Policy ("Policy") describes how we collect, use, and share your personal information when you use our Drawwii mobile application ("Service"). By using our Service, you agree to the terms of this Policy.
 
 ### 1. Information We Collect
 
-We collect telemetry information to improve our product for our users. This data includes, but is not limited to, usage patterns, device information, and user interactions within our Service.
+We collect telemetry information to improve our product for our users. This data includes, but is not limited to, usage patterns, device information, and user interactions within our Service. This information is used only for analytics and is not used to track you across other apps or websites.
 
 ### 2. How We Use Your Information
 
@@ -22,23 +22,27 @@ Your information is used to:
 - Understand user behavior and preferences.
 - Address technical issues and provide support.
 
-### 3. Third-Party Services
+### 3. Photos and Images
 
-We utilize third-party services to facilitate our data collection and analysis. These third parties include Firebase Analytics, Crashlytics, Sentry, and Mixpanel. These services may have their own privacy policies, and we encourage you to review them.
+When you choose to use photos or images — for example, as a drawing background, in a collage, or with the Magic Eraser — Drawwii accesses them from your device only with your permission. All image editing, including the AI-based Magic Eraser, runs entirely on your device. We do not upload, store, or collect your photos, drawings, or edited images on our servers. Your drawings and backups are kept locally on your device, and images are saved to your device's photo library only when you explicitly choose to save them.
 
-### 4. Security
+### 4. Third-Party Services
+
+We utilize third-party services to facilitate our data collection and analysis. These third parties include Firebase Analytics, Sentry, and Mixpanel. These services may have their own privacy policies, and we encourage you to review them.
+
+### 5. Security
 
 We value your trust in providing us with your information, and we strive to use commercially acceptable means to protect it. However, no method of electronic storage or transmission is 100% secure, so we cannot guarantee absolute security.
 
-### 5. Changes to this Policy
+### 6. Changes to this Policy
 
 We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. Changes are effective once they are posted on this page.
 
-### 6. Your Consent
+### 7. Your Consent
 
 By using our Service, you consent to our Privacy Policy and our collection and use of information in accordance with this Policy.
 
-### 7. Contact Us
+### 8. Contact Us
 
 If you have questions or concerns about our Privacy Policy, please contact us at: develop@bullets.co.kr
 
