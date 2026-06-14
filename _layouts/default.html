@@ -21,7 +21,7 @@
                             </video>
                         </div>  
                         
-                        <img class="iphoneScreen hidden" src="" alt="">
+                        <img class="iphoneScreen hidden" src="" alt="{{ site.app_name }} app screenshot">
 
                         {% include screencontent.html %}
 
@@ -35,7 +35,7 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <img class="appIconLarge" src="{{ site.app_icon | relative_url }}">
+                            <img class="appIconLarge" src="{{ site.app_icon | relative_url }}" alt="{{ site.app_name }} app icon">
                         </div>
                         <div class="appNamePriceContainer">
                             <h1 class="appName">
@@ -52,9 +52,9 @@
                         </div>
                         <div class="downloadButtonsContainer">
                             {% if site.playstore_link %}
-                                <a class="playStoreLink" href="{{site.playstore_link}}"><img class="playStore" src="assets/playstore.png"></a>
+                                <a class="playStoreLink" href="{{site.playstore_link}}"><img class="playStore" src="assets/playstore.png" alt="Get it on Google Play"></a>
                             {% endif %}
-                            <a class="appStoreLink" href="{{site.appstore_link}}"><img class="appStore" src="assets/appstore.png"></a>
+                            <a class="appStoreLink" href="{{site.appstore_link}}"><img class="appStore" src="assets/appstore.png" alt="Download on the App Store"></a>
                         </div>
                     </div>
                     {% include features.html %}

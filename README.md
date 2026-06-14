@@ -1,113 +1,42 @@
-# Automatic App Landing Page
-**Create and deploy an iOS app landing page on GitHub Pages in only five minutes.**
+# Drawwii — Landing Page
 
-Designed for GitHub Pages for super easy set up. 
+[Drawwii](https://drawwii.com) 모바일 드로잉 앱(iOS·Android)의 공식 랜딩 페이지입니다.
+[Automatic App Landing Page](https://github.com/emilbaehr/automatic-app-landing-page) Jekyll 템플릿을 기반으로 하며, GitHub Pages에서 빌드·호스팅되고 커스텀 도메인 `drawwii.com`으로 서비스됩니다.
 
-🔧 Fork this repo
+앱 저장소: <https://github.com/develop-bullets/bullets-drawwii-service-app> (이 페이지는 해당 저장소 `main` 브랜치의 변경사항을 반영합니다.)
 
-🗝 Enter iOS App ID in `_config.yml`
+## 로컬 개발
 
-📲 Upload video preview or screenshot
+```bash
+bundle install                 # 의존성 설치 (github-pages gem)
+bundle exec jekyll serve       # http://localhost:4000 에서 미리보기
+bundle exec jekyll build       # _site/ 에 정적 사이트 생성
+```
 
-🎨 Customise site in `_config.yml` (no HTML/CSS)
+## 콘텐츠 수정 가이드
 
-📝 Write Privacy Policy as markdown in `privacypolicy.md`
+대부분의 변경은 HTML/CSS 없이 아래 파일만 수정하면 됩니다.
 
-🕒 Keep a changelog in `CHANGELOG.md`
+| 변경 사항 | 수정할 곳 |
+|---|---|
+| 앱 이름·설명·슬로건, 기능 목록, 테마 색상, 소셜 계정 | `_config.yml` |
+| 앱 아이콘·가격·App Store 링크 | `_config.yml` (비워 두면 iOS App ID로 iTunes API에서 자동 채움) |
+| 버전 변경 내역 | `_pages/changelog.md` |
+| 개인정보처리방침 / 이용약관 | `_pages/privacy.md`, `_pages/terms.md` |
+| 스크린샷 / 데모 영상 | `assets/screenshot/` (`.png`/`.jpg`), `assets/videos/` (`.mp4`/`.mov`/`.ogg`/`.webm`) |
+| 기기 프레임 색상 | `_config.yml`의 `device_color` (blue/black/yellow/coral/white) |
 
-✅ Site becomes live at GitHub Pages repository URL, e.g. `https://your-username.github.io/your-repo-name/`.
+스크린샷·영상 권장 해상도: 828x1792, 1125x2436, 1242x2688.
 
-<img src="https://emilbaehr.com/files/jayson1.png" width="440"> <img src="https://emilbaehr.com/files/slor1.png" width="440">
+## 배포
 
-
-
-
-## Quick Start
-
-### Step 1: Fork this repo.
-After forking the repo, your site will be live immediately on your personal Github Pages account, e.g. `https://yourusername.github.io/your-repo-name/`.
-
-*Make sure GitHub Pages is enabled for your repo. It might take some time for the site to propagate entirely.*
-
-
-
-### Step 2: Enter iOS App ID in `_config.yml`
-Enter your iOS app ID in the `ios_app_id` field and commit your changes. Your site will automatically rebuild with your app icon, name, price and link to App Store.
-
-You can go on with customising almost anything in the `_config.yml` file. 
-
-Things you can customise in `_config.yml`:
-- App Name
-- App Icon
-- App Description
-- App Price
-- App Store Link
-- Play Store Link
-- Press Kit Download Link
-- Cover Image
-- Cover Overlay Color
-- Background Color
-- Text Colors
-- iPhone Device Color
-- Your Name / Company Name
-- Link to Website
-- Social Links and Contact Info
-- Feature List (Title, text, icon)
-
-
-
-### Step 3: Add screenshot or video
-
-#### Adding a screenshot
-Upload a `.png` or `.jpg` of your app to the folder `assets/screenshot/`. The name does not matter. Be sure to delete the placeholder `yourscreenshot.png`.
-
-#### Adding video
-Upload your video to the folder `assets/videos/`. To have support for most browsers, you need to upload two files – one for Safari and one for Chrome/Firefox.
-
-Video formats supported by Chrome and Firefox:
-- `.webm`
-- `.ogg`
-
-Video formats supported by Safari:
-- `.mp4`
-- `.mov`
-
-#### Resolutions
-The videos and screenshots must have one of the following resolutions:
-- 828x1792
-- 1125x2436
-- 1242x2688
-
-
-
-### Step 4: Edit (or remove) Privacy Policy and Changelog
-Your site automatically includes pages for a Privacy Policy and a Changelog. Change the content of these pages by editing the `privacypolicy.md` and `CHANGELOG.md` files in the `_pages` directory.
-
-In each of the markdown files, you can set the `include_in_header:` value to either `true` or `false`. This determines if the page is included in the top navigation.
-By default, only the Changelog is included in the top navigation. The title of the navigation item can also be edited, by editing the `title:` in each markdown file.
-
-If you need to, you can create additional markdown based pages just by creating an `.md` file like the `privacypolicy.md` and `CHANGELOG.md` files in the `_pages` directory.
-
-**Please note:** The Privacy Policy and Changelog provided are written using dummy text, so please adapt each of them for your own app.
-You can also choose not to include these pages, by simple deleting the `privacypolicy.md` and `CHANGELOG.md` files.
-
-
-
-
-## Feedback
-If you have feedback regarding bugs or improvements, open an issue, @ me on Twitter or write me an email. You can find my contact info on my website.
-
-I'd love to see the sites you create using this little tool.
+`master` 브랜치에 push하면 GitHub Pages가 자동으로 빌드·배포합니다.
 
 ## Credits
-- [Jekyll](https://github.com/jekyll/jekyll)
-- [FontAwesome](https://fontawesome.github.io/Font-Awesome/)
 
-## Donations
-[Donations are welcome](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=S8ZZT3JXJPN92&currency_code=USD&source=url)
-
-## Author
-[Emil Baehr](https://emilbaehr.com/)
+- 템플릿: [Automatic App Landing Page](https://github.com/emilbaehr/automatic-app-landing-page) by Emil Baehr (MIT License)
+- [Jekyll](https://github.com/jekyll/jekyll), [FontAwesome](https://fontawesome.com/)
 
 ## License
+
 [MIT License](LICENSE)

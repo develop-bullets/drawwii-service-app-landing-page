@@ -2,3 +2,8 @@
 .sass-cache
 _site
 Gemfile.lock
+
+# Claude Code
+CLAUDE.md
+CLAUDE.local.md
+.claude/
