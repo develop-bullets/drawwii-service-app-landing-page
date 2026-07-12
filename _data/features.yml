@@ -14,15 +14,15 @@
   reverse: false
 
 - icon: i-sparkles
-  title: Edit photos — privately, on your device
-  lede: Photoshop-grade AI, without the upload.
+  title: Edit photos on your device
+  lede: Retouch personal photos without handing them to a server.
   body: >-
-    Magic Eraser removes anything from a photo with AI inpainting — lasso it, box
-    it, brush it, or let subject detection pick it for you, then drag the
-    before/after slider to compare. Background Remover cuts out the subject and
-    swaps in a color, gradient, photo, or blur. Fine-tune with tone curves, HSL,
+    Magic Eraser removes unwanted objects from a photo and fills in what was
+    behind them — lasso it, box it, brush it, or let subject detection pick it for
+    you, then drag the before/after slider to compare. Background Remover cuts out
+    the subject and swaps in a color, gradient, photo, or blur. Fine-tune with tone curves, HSL,
     split toning, vignette, clarity, and one-tap Looks.
-  note: All AI runs on your device. Your photos are never uploaded to a server.
+  note: Editing is processed on your device — your photos are not uploaded.
   screenshots:
     - src: /assets/screenshots/02-eraser
       alt: Magic Eraser before-and-after comparison
