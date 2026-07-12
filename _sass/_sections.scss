@@ -44,11 +44,66 @@
 .hero__trust svg { width: 16px; height: 16px; }
 
 .hero__media {
+  // 마스코트 기하 — 글로우(::before)와 이미지(.hero__mascot)가 공유하는 단일 소스.
+  //  x/y = 폰 좌하단 기준 오프셋(음수 = 폰 밖). 높이는 w * 768/407 로 파생된다.
+  --mascot-w: 128px;
+  --mascot-x: -12px;
+  --mascot-y: -10px;
+  --glow-d:   200px;
+
+  position: relative;
+  z-index: 0;              // ::before(z-index:-1)를 폰 아래·히어로 배경 위에 가둔다
   justify-self: center;
   width: 100%;
   max-width: 300px;
 }
-.hero__media .phone { box-shadow: 0 30px 70px rgba(0, 0, 0, .35); }
+
+// 마스코트 뒤 소프트 글로우. 마스코트도 배경도 핑크라 이게 없으면 실루엣이 묻는다.
+// 폰보다 아래 레이어라 스크린샷을 뿌옇게 만들지 않는다.
+// (앱 tools/store_screenshots/compose/feature_graphic.py 의 글로우 레시피 이식)
+.hero__media::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left:   calc(var(--mascot-x) + var(--mascot-w) / 2);
+  bottom: calc(var(--mascot-y) + var(--mascot-w) * 768 / 407 / 2);
+  width:  var(--glow-d);
+  height: var(--glow-d);
+  transform: translate(-50%, 50%);   // 마스코트 중심에 정렬
+  background: radial-gradient(circle closest-side,
+              rgba(255, 255, 255, .50)  0%,
+              rgba(255, 214, 236, .30) 40%,
+              rgba(255, 214, 236, .10) 66%,
+              rgba(255, 214, 236, 0)  100%);
+  pointer-events: none;
+}
+
+.hero__mascot {
+  position: absolute;
+  z-index: 2;                        // 폰(z-index:auto) 위
+  left:   var(--mascot-x);
+  bottom: var(--mascot-y);
+  width:  var(--mascot-w);
+  pointer-events: none;
+  // 앱 레시피(rgb(40,10,30) / a.42 / offset 8,14 / σ18)를 CSS 로 환산.
+  // 첫 번째 타이트 그림자는 핑크 배경 위 엣지 정의용.
+  filter:
+    drop-shadow(0 1px 2px rgba(90, 31, 61, .35))
+    drop-shadow(8px 14px 26px rgba(40, 10, 30, .45));
+}
+.hero__mascot picture { display: block; }
+.hero__mascot img { width: 100%; height: auto; }
+
+@media (min-width: 520px) {
+  .hero__media { --mascot-w: 168px; --mascot-x: -50px; --mascot-y: -16px; --glow-d: 340px; }
+}
+@media (min-width: 1100px) {
+  .hero__media { --mascot-w: 184px; --mascot-x: -74px; --mascot-y: -18px; --glow-d: 380px; }
+}
+
+// 광원을 마스코트 drop-shadow 와 같은 좌상단으로 통일한다. x 오프셋 0 이면 그림자가
+// 왼쪽으로 70px 번져 마스코트 뒤 흰 글로우를 검게 깎는다.
+.hero__media .phone { box-shadow: 12px 30px 64px -8px rgba(28, 8, 20, .38); }
 
 // ── Highlights ───────────────────────────────────────
 .highlights {

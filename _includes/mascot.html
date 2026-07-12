@@ -1,0 +1,15 @@
+{%- comment -%}
+  마스코트. webp + png 폴백. 원본 407x768 (앱 app-icon-transparent.png 알파 크롭).
+  @2x 없음 — 원본이 407px 이라 그 위는 업스케일이다.
+  params:
+    class — <img> 에 붙일 클래스
+    alt   — 대체 텍스트. 기본 "" (장식용)
+    eager — true 면 즉시 로드 (히어로 above-the-fold). 없으면 lazy.
+{%- endcomment -%}
+<picture>
+  <source type="image/webp" srcset="/assets/brand/mascot.webp">
+  <img {% if include.class %}class="{{ include.class }}" {% endif %}src="/assets/brand/mascot.png"
+       width="407" height="768" alt="{{ include.alt }}"
+       {% if include.eager %}loading="eager"{% else %}loading="lazy"{% endif %}
+       decoding="async">
+</picture>

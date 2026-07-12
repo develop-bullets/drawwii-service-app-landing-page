@@ -7,7 +7,7 @@
 소스 경로 (앱 저장소):
   스크린샷 : <APP>/tools/store_screenshots/raw/android/en/*.png   (1080x2400)
   앱 아이콘 : <APP>/assets/common/app-icon.png                     (1024x1024)
-  마스코트  : <APP>/assets/images/logo/drawwii_logo.png            (265x500)
+  마스코트  : <APP>/assets/common/app-icon-transparent.png         (1024x1024, 알파 bbox 407x768)
   폰트      : <APP>/assets/fonts/Pretendard-*.otf                  (OFL)
   OFL       : <APP>/assets/licenses/Pretendard-OFL.txt
 
@@ -37,7 +37,7 @@ APP = Path(os.environ.get("APP_REPO", "/Users/jyr/StudioProjects/bullets/drawwii
 
 RAW = APP / "tools/store_screenshots/raw/android/en"
 APP_ICON = APP / "assets/common/app-icon.png"
-MASCOT = APP / "assets/images/logo/drawwii_logo.png"
+MASCOT = APP / "assets/common/app-icon-transparent.png"
 FONT_DIR = APP / "assets/fonts"
 OFL = APP / "assets/licenses/Pretendard-OFL.txt"
 
@@ -163,9 +163,16 @@ def build_icons() -> None:
 
 # ── 3. 마스코트 ───────────────────────────────────────
 def build_mascot() -> None:
-    log("마스코트 → webp (265w, 확대 금지)")
-    m = Image.open(MASCOT).convert("RGBA")  # 265x500
-    save_webp(m, OUT_BRAND / "mascot.webp", quality=90)
+    """투명 배경 앱 아이콘(1024²)에서 마스코트만 알파 bbox 로 잘라낸다.
+
+    drawwii_logo.png(265x500) 보다 1.54배 큰 무손실 원본(407x768)이라 히어로에서
+    쓸 수 있다. 히어로 CSS 폭은 최대 184px → 2x DPR 에서 368px 이면 충분하므로
+    @2x 는 만들지 않는다 (407px 를 넘기면 업스케일이라 무의미).
+    """
+    im = Image.open(MASCOT).convert("RGBA")  # 1024x1024
+    m = im.crop(im.getchannel("A").getbbox())  # → 407x768
+    log(f"마스코트 → {m.width}x{m.height} webp + png 폴백 (확대 금지)")
+    save_webp(m, OUT_BRAND / "mascot.webp", quality=82)
     m.save(OUT_BRAND / "mascot.png", optimize=True)
 
 

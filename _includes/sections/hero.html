@@ -29,13 +29,18 @@
                  width="600" height="1333" aria-label="Drawwii demo">
             {%- if webm %}<source src="{{ webm.path | relative_url }}" type="video/webm">{% endif -%}
             {%- if mp4  %}<source src="{{ mp4.path  | relative_url }}" type="video/mp4">{% endif -%}
-            <img src="/assets/screenshots/01-draw.png" width="600" height="1333" alt="Drawing in Drawwii">
+            <img src="/assets/screenshots/02-eraser.png" width="600" height="1333"
+                 alt="The Drawwii Magic Eraser screen with a before-and-after slider">
           </video>
         </div>
       </div>
       {%- else -%}
-      {% include phone.html src="/assets/screenshots/01-draw" alt="The Drawwii drawing editor with a colorful sketch" eager=true %}
+      {% include phone.html src="/assets/screenshots/02-eraser" alt="The Drawwii Magic Eraser screen with a before-and-after slider on an edited photo" eager=true %}
       {%- endif -%}
+
+      <div class="hero__mascot">
+        {% include mascot.html eager=true %}
+      </div>
     </div>
   </div>
 </section>
