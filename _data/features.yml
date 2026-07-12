@@ -1,0 +1,67 @@
+# 기능 6블록. 숫자는 라운딩(290+/20+/40+/8) — 앱 릴리스 시 여기만 갱신.
+- icon: i-brush
+  title: Draw freely
+  lede: A real drawing studio, not a toy.
+  body: >-
+    Eight pressure-sensitive brushes — pen, highlighter, calligraphy, neon, spray,
+    marker, pencil, and eraser. Ten shapes with gradient fill and dashed strokes.
+    Layers you can merge, clip, lock, and blend. Text with curve, letter-spacing,
+    and background boxes. Mirror, four-way, and mandala symmetry. Rulers, grids,
+    flood fill, palm rejection — and a reference image you can trace over.
+  screenshots:
+    - src: /assets/screenshots/01-draw
+      alt: The Drawwii drawing editor with brushes and a color palette
+  reverse: false
+
+- icon: i-sparkles
+  title: Edit photos — privately, on your device
+  lede: Photoshop-grade AI, without the upload.
+  body: >-
+    Magic Eraser removes anything from a photo with AI inpainting — lasso it, box
+    it, brush it, or let subject detection pick it for you, then drag the
+    before/after slider to compare. Background Remover cuts out the subject and
+    swaps in a color, gradient, photo, or blur. Fine-tune with tone curves, HSL,
+    split toning, vignette, clarity, and one-tap Looks.
+  note: All AI runs on your device. Your photos are never uploaded to a server.
+  screenshots:
+    - src: /assets/screenshots/02-eraser
+      alt: Magic Eraser before-and-after comparison
+    - src: /assets/screenshots/03-bg-remove
+      alt: Background removal replacing a photo backdrop
+  reverse: true
+
+- icon: i-layout
+  title: Templates & collage
+  lede: A finished design in a few taps.
+  body: >-
+    Start from 290+ ready-made templates across 20+ categories — invitations,
+    planners, checklists, celebrations, and more. Or pick from 40+ social size
+    presets for Instagram, YouTube, TikTok, X, and LinkedIn. Combine photos with
+    grid or freeform collage, then keep editing right in the drawing editor.
+  screenshots:
+    - src: /assets/screenshots/04-templates
+      alt: The template picker showing business and event layouts
+  reverse: false
+
+- icon: i-flame
+  title: Build a drawing habit
+  lede: The best drawing app is the one you actually open.
+  body: >-
+    A fresh prompt every day. Streaks, an activity heatmap, weekly challenges, and
+    10 achievements to unlock — small nudges that keep you coming back to draw.
+  screenshots:
+    - src: /assets/screenshots/06-habit
+      alt: The habit screen with a drawing streak and activity heatmap
+  reverse: true
+
+- icon: i-images
+  title: Your gallery, organized
+  lede: Everything you make, right where you left it.
+  body: >-
+    Search, sort, tag, favorite, and duplicate your work. A 30-day trash so
+    nothing is lost by accident. Back up everything to a single .drawwii file and
+    restore it on a new phone. Turn several drawings into an animated GIF.
+  screenshots:
+    - src: /assets/screenshots/07-gallery
+      alt: The gallery grid with favorited and tagged drawings
+  reverse: false

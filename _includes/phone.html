@@ -1,0 +1,20 @@
+{%- comment -%}
+  CSS 기기 프레임에 스크린샷을 넣는 재사용 include.
+  params:
+    src   — 확장자 없는 경로 (예: /assets/screenshots/01-draw)
+    alt   — 대체 텍스트
+    eager — true 면 LCP 우선 로드 (히어로용). 없으면 lazy.
+{%- endcomment -%}
+<div class="phone">
+  <div class="phone__screen">
+    <picture>
+      <source type="image/webp"
+              srcset="{{ include.src }}.webp 600w, {{ include.src }}@2x.webp 1200w"
+              sizes="(max-width: 640px) 72vw, 260px">
+      <img src="{{ include.src }}.png" width="600" height="1333"
+           alt="{{ include.alt }}"
+           {% if include.eager %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %}
+           decoding="async">
+    </picture>
+  </div>
+</div>

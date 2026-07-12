@@ -1,0 +1,19 @@
+# FAQ — 화면(<details>) + JSON-LD FAQPage 공용 소스. 문구는 검증된 사실만.
+- q: Is Drawwii free?
+  a: Yes. Drawwii is free to download, with no subscriptions and no in-app purchases.
+- q: Do I need an account?
+  a: No. There is no sign-in and no cloud sync — everything is stored on your device.
+- q: Are my photos uploaded to a server?
+  a: No. Background removal and the Magic Eraser run entirely on your device, so your photos are never uploaded.
+- q: Does Drawwii work offline?
+  a: Drawing, photo adjustments, collages, and templates all work offline. The Magic Eraser downloads its AI model (about 198 MB) once over the internet; after that it runs on your device.
+- q: Which devices are supported?
+  a: iPhone on iOS 17 or later, and Android phones on Android 9 or later.
+- q: What formats can I export?
+  a: PNG, transparent PNG, JPG, PDF, and SVG, at the resolution you choose. You can also share a timelapse of your drawing.
+- q: Can I move my drawings to a new phone?
+  a: Yes. Back up your whole gallery to a single .drawwii file, then restore it on the new device.
+- q: What languages does Drawwii support?
+  a: English, Korean, and Japanese, switchable in Settings.
+- q: Does Drawwii collect any data?
+  a: Anonymous usage analytics only, to improve the app. Your images are never included, and you can opt out in Settings.

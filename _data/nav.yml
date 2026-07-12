@@ -1,0 +1,10 @@
+# 상단 내비 링크. 서브페이지(/privacy/ 등)에서도 동작하도록 홈 기준 절대 경로를 쓴다.
+# (Jekyll 예약 변수 site.pages 순회 대신 명시적으로 관리)
+- label: Features
+  href: /#features
+- label: Screenshots
+  href: /#screenshots
+- label: Privacy
+  href: /#privacy
+- label: FAQ
+  href: /#faq

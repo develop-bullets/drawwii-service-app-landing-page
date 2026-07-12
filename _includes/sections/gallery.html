@@ -1,0 +1,42 @@
+<section class="section" id="screenshots">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">See it in action</span>
+      <h2>A closer look</h2>
+      <p class="section__lede">Swipe through Drawwii, screen by screen.</p>
+    </div>
+  </div>
+
+  <div class="container gallery">
+    <div class="gallery__rail" id="galleryRail" tabindex="0" role="region" aria-label="Screenshots, scrollable">
+      {%- for shot in site.data.gallery %}
+      <figure class="gallery__item">
+        {% include phone.html src=shot.src alt=shot.alt %}
+        <figcaption>{{ shot.caption }}</figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+    <div class="gallery__nav">
+      <button class="gallery__btn" type="button" data-gallery-prev aria-label="Previous screenshots">
+        <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"/></svg>
+      </button>
+      <button class="gallery__btn" type="button" data-gallery-next aria-label="Next screenshots">
+        <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var rail = document.getElementById('galleryRail');
+      if (!rail) return;
+      var step = function () { return Math.min(rail.clientWidth * 0.8, 520); };
+      document.querySelector('[data-gallery-prev]').addEventListener('click', function () {
+        rail.scrollBy({ left: -step(), behavior: 'smooth' });
+      });
+      document.querySelector('[data-gallery-next]').addEventListener('click', function () {
+        rail.scrollBy({ left: step(), behavior: 'smooth' });
+      });
+    })();
+  </script>
+</section>

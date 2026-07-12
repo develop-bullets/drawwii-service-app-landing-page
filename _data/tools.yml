@@ -1,0 +1,29 @@
+# 도구 탭 (앱 eraser_home_screen.dart 3섹션). 라운딩 "20+ tools".
+- group: Photo editing
+  items:
+    - Remove background
+    - Profile picture
+    - Adjust photo
+    - Crop & rotate
+    - Blur & hide
+    - Effects
+    - Watermark
+    - Border & frame
+    - Focus blur
+    - Erase objects
+- group: Create & convert
+  items:
+    - Collage
+    - Batch remove background
+    - Compress
+    - Split image
+    - Color palette
+    - Images to PDF
+    - Stitch images
+    - GIF maker
+    - Rounded card
+- group: Codes & scan
+  items:
+    - QR code
+    - Scan code
+    - Scan document

@@ -1,0 +1,26 @@
+<section class="section" id="features">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Everything in one app</span>
+      <h2>One app, from blank canvas to finished share</h2>
+      <p class="section__lede">Drawing, AI photo editing, templates, collage, and a gallery that keeps it all together.</p>
+    </div>
+
+    {%- for f in site.data.features %}
+    <article class="feature{% if f.reverse %} feature--reverse{% endif %}">
+      <div class="feature__media{% if f.screenshots.size > 1 %} feature__media--pair{% endif %}">
+        {%- for s in f.screenshots %}
+        {% include phone.html src=s.src alt=s.alt %}
+        {%- endfor %}
+      </div>
+      <div class="feature__body">
+        <div class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#{{ f.icon }}"/></svg></div>
+        <h3 class="feature__title">{{ f.title }}</h3>
+        {%- if f.lede %}<p class="feature__lede">{{ f.lede }}</p>{% endif %}
+        <p>{{ f.body }}</p>
+        {%- if f.note %}<p class="feature__note">{{ f.note }}</p>{% endif %}
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>

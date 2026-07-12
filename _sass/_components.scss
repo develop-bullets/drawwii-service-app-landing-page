@@ -1,0 +1,135 @@
+// Reusable components: buttons, store badges, phone frame, cards, chips, icons
+
+// ── Buttons ──────────────────────────────────────────
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 14px 24px;
+  border-radius: var(--r-pill);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform .12s ease, background .15s ease, border-color .15s ease;
+  &:hover { text-decoration: none; }
+  &:active { transform: translateY(1px); }
+}
+.btn--primary {
+  background: var(--brand-700);
+  color: #fff;
+  &:hover { background: var(--brand-600); }
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--border);
+  &:hover { border-color: var(--brand-300); color: var(--brand-700); }
+}
+.btn--on-dark {
+  background: #fff;
+  color: var(--plum-900);
+  &:hover { background: var(--brand-100); }
+}
+
+// ── Store badges ─────────────────────────────────────
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.store-badges img {
+  height: 48px;
+  width: auto;
+}
+.store-badges a:hover { text-decoration: none; }
+
+// ── Phone frame (CSS만; PNG 프레임 불필요) ───────────
+.phone {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1080 / 2400;
+  margin-inline: auto;
+  background: #0d0d0f;
+  border-radius: 38px;
+  padding: 9px;
+  box-shadow: var(--shadow-phone);
+}
+.phone__screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #000;
+}
+.phone__screen img,
+.phone__screen video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+// ── Cards ────────────────────────────────────────────
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 28px;
+  box-shadow: var(--shadow-1);
+}
+
+.icon-badge {
+  display: grid;
+  place-items: center;
+  width: 52px; height: 52px;
+  border-radius: 15px;
+  background: var(--brand-100);
+  color: var(--brand-700);
+  margin-bottom: 18px;
+}
+@media (prefers-color-scheme: dark) {
+  .icon-badge { background: rgba(223, 100, 163, .16); color: var(--accent); }
+}
+.icon-badge svg { width: 26px; height: 26px; }
+
+.icon { width: 1.25em; height: 1.25em; fill: none; stroke: currentColor;
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+// ── Chips (tools) ────────────────────────────────────
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 14px;
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--ink);
+  font-size: .92rem;
+  font-weight: 500;
+}
+.chip svg { width: 15px; height: 15px; color: var(--brand-700); }
+@media (prefers-color-scheme: dark) {
+  .chip svg { color: var(--accent); }
+}
+
+// ── Pills / meta list ────────────────────────────────
+.meta-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  color: var(--ink-2);
+  font-size: .92rem;
+}
+.meta-pills li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.meta-pills svg { width: 15px; height: 15px; color: var(--brand-500); flex: none; }

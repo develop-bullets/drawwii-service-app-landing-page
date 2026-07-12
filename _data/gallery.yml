@@ -1,0 +1,22 @@
+# 갤러리 7장. 캡션은 앱 store_screenshots/scenes.py 의 en 캡션과 동일 (스토어와 문구 일치).
+- src: /assets/screenshots/01-draw
+  caption: Draw freely with 8 pressure-sensitive brushes
+  alt: The Drawwii drawing editor
+- src: /assets/screenshots/02-eraser
+  caption: "Magic Eraser: erase anything with on-device AI"
+  alt: Magic Eraser before-and-after comparison
+- src: /assets/screenshots/03-bg-remove
+  caption: Remove backgrounds instantly — no upload needed
+  alt: Background removal in Drawwii
+- src: /assets/screenshots/04-templates
+  caption: 290+ templates across 20+ categories
+  alt: The Drawwii template picker
+- src: /assets/screenshots/05-stickers
+  caption: Add stickers and photo cutouts to your art
+  alt: Stickers and cutouts on a Drawwii canvas
+- src: /assets/screenshots/06-habit
+  caption: Build a daily drawing habit
+  alt: The Drawwii habit and streak screen
+- src: /assets/screenshots/07-gallery
+  caption: Your gallery, organized your way
+  alt: The Drawwii gallery grid

@@ -1,0 +1,19 @@
+<section class="section" style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Toolbox</span>
+      <h2>20+ tools, one tap away</h2>
+      <p class="section__lede">A pocket toolbox for everyday image work — no sign-up, no upload.</p>
+    </div>
+    {%- for g in site.data.tools %}
+    <div class="tools-group">
+      <h3 class="tools-group__title">{{ g.group }}</h3>
+      <div class="tools-grid">
+        {%- for t in g.items %}
+        <span class="chip">{{ t }}</span>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

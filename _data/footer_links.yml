@@ -1,0 +1,7 @@
+# 푸터 링크 (서브페이지 URL 명시). collection permalink 과 일치해야 함.
+- label: Privacy Policy
+  href: /privacy/
+- label: Terms of Use
+  href: /terms/
+- label: What's New
+  href: /changelog/

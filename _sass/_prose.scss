@@ -1,0 +1,45 @@
+// Subpage prose (privacy / terms / changelog markdown)
+
+.page-header {
+  background: var(--grad-brand);
+  color: #fff;
+  padding-block: clamp(48px, 8vw, 88px);
+}
+.page-header h1 { color: #fff; margin: 0; }
+.page-header p { margin: .5rem 0 0; color: rgba(255, 255, 255, .85); }
+
+.prose {
+  max-width: 760px;
+  margin-inline: auto;
+  padding-block: clamp(40px, 7vw, 72px);
+  color: var(--ink);
+}
+.prose > :first-child { margin-top: 0; }
+.prose h1 { font-size: 1.9rem; margin-top: 0; }
+.prose h2 {
+  font-size: 1.5rem;
+  margin: 2em 0 .6em;
+  padding-bottom: .3em;
+  border-bottom: 1px solid var(--border);
+}
+.prose h3 { font-size: 1.2rem; margin: 1.6em 0 .5em; }
+.prose p, .prose li { color: var(--ink-2); line-height: 1.7; }
+.prose ul { list-style: disc; padding-left: 1.4em; margin: 0 0 1rem; }
+.prose ol { padding-left: 1.4em; margin: 0 0 1rem; }
+.prose li { margin-bottom: .4em; }
+.prose a { color: var(--accent); text-decoration: underline; }
+.prose strong { color: var(--ink); }
+.prose code {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: .1em .4em;
+  font-size: .9em;
+}
+.prose hr { border: 0; border-top: 1px solid var(--border); margin: 2.5em 0; }
+.prose blockquote {
+  margin: 1.5em 0;
+  padding: .5em 1.2em;
+  border-left: 3px solid var(--brand-300);
+  color: var(--ink-2);
+}

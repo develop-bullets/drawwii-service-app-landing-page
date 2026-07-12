@@ -1,0 +1,67 @@
+{%- comment -%}
+  JSON-LD (홈에만). SoftwareApplication + FAQPage.
+  FAQ 는 _data/faq.yml 하나를 화면(<details>)과 공유 → 구조화 데이터=가시 콘텐츠 자동 일치.
+  aggregateRating/review 는 넣지 않는다 (실측 평점 없음 → 정책 위반).
+{%- endcomment -%}
+{%- capture screenshots -%}
+{%- for s in site.data.gallery -%}
+"{{ s.src | append: '.png' | absolute_url }}"{%- unless forloop.last -%},{%- endunless -%}
+{%- endfor -%}
+{%- endcapture -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": {{ site.app.name | jsonify }},
+  "alternateName": "Drawwii",
+  "applicationCategory": "DesignApplication",
+  "applicationSubCategory": "Drawing & Photo Editing",
+  "operatingSystem": "iOS {{ site.app.ios_min }} or later, Android {{ site.app.android_min }} or later",
+  "softwareVersion": {{ site.app.version | jsonify }},
+  "url": {{ '/' | absolute_url | jsonify }},
+  "installUrl": [{{ site.app.appstore_link | jsonify }}, {{ site.app.playstore_link | jsonify }}],
+  "image": {{ site.seo.og_image | absolute_url | jsonify }},
+  "screenshot": [{{ screenshots }}],
+  "description": {{ site.description | strip_newlines | jsonify }},
+  "inLanguage": {{ site.app.languages | jsonify }},
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": {{ site.app.price | jsonify }},
+    "priceCurrency": {{ site.app.currency | jsonify }},
+    "availability": "https://schema.org/InStock",
+    "category": "free"
+  },
+  "featureList": [
+    "8 pressure-sensitive brushes",
+    "Layers with 8 blend modes",
+    "On-device AI Magic Eraser",
+    "On-device background removal",
+    "290+ design templates",
+    "Photo collage",
+    "Export PNG, transparent PNG, JPG, PDF, and SVG"
+  ],
+  "author": { "@type": "Organization", "name": {{ site.publisher.name | jsonify }} },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.publisher.name | jsonify }},
+    "email": {{ site.publisher.email | jsonify }},
+    "url": {{ site.url | jsonify }}
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in site.data.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | jsonify }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | jsonify }} }
+    }{%- unless forloop.last %},{% endunless -%}
+    {%- endfor %}
+  ]
+}
+</script>

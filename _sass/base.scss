@@ -1,65 +1,101 @@
-// Layout and grids
-$content-width: 1170px;
+// Reset + base typography
+// Pretendard Latin 서브셋 셀프호스트 (assets/fonts/, OFL). 외부 폰트 요청 0.
 
-// Fonts and sizes
-$font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$primary-text-color: #000000;
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/pretendard-latin-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/pretendard-latin-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/pretendard-latin-700.woff2") format("woff2");
+}
+
+*, *::before, *::after { box-sizing: border-box; }
 
 html {
-	font-size: 62.5%;
-	font-family: $font;
-	line-height: 1;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
 }
 
 body {
-	font-size: 2rem;
-	background-color: $body-color;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-.subPageBody {
-	background-color: #fff;
+h1, h2, h3, h4 {
+  margin: 0 0 .5em;
+  line-height: 1.15;
+  letter-spacing: -.015em;
+  font-weight: 700;
+}
+h1 { font-size: clamp(2.4rem, 6vw, 3.75rem); line-height: 1.05; letter-spacing: -.025em; }
+h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); }
+h3 { font-size: 1.3rem; letter-spacing: -.01em; }
+
+p { margin: 0 0 1rem; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+img, video, svg { max-width: 100%; display: block; }
+
+ul { margin: 0; padding: 0; list-style: none; }
+
+:focus-visible {
+  outline: 3px solid var(--brand-500);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
-h1 {
-	font-size: 3rem;
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-h2 {
-	font-size: 2rem;
-}
-
-h3 {
-    font-size: 2rem;
-}
-
-// Better font rendering
-body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background-color: $body-color;
-}
-
-a:link,
-a:hover,
-a:visited,
-a:active {
-	color: $accent-color;
-	text-decoration: none;
-}
-
-// Shadows
-$drop-shadow: 	drop-shadow(0px 5px 10px rgba(#000, 0.1)) 
-				drop-shadow(0px 1px 1px rgba(#000, 0.2)
-				);
-
-// Various resets
-*,
-*::before,
-*::after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-
-	margin: 0;
-	padding: 0;
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  z-index: 100;
+  background: var(--brand-700);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 0 0 var(--r-sm) 0;
+  &:focus { left: 0; }
 }

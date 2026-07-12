@@ -1,0 +1,41 @@
+{%- comment -%}
+  히어로. 데모 영상이 assets/videos/ 에 있으면 <video>, 없으면 스크린샷 폴백.
+  영상 추가 방법: assets/videos/drawwii-demo.mp4(+.webm) 커밋 → 코드 변경 0으로 자동 전환.
+{%- endcomment -%}
+{%- assign vids = site.static_files | where_exp: "f", "f.path contains '/assets/videos/'" -%}
+{%- assign mp4  = vids | where: "extname", ".mp4"  | first -%}
+{%- assign webm = vids | where: "extname", ".webm" | first -%}
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <h1 class="hero__title">Draw freely.<br>Edit photos privately.</h1>
+      <p class="hero__lede">A full drawing studio and an on-device AI photo editor in one app — brushes, layers, background removal, and 290+ templates, all running on your phone.</p>
+      <div class="hero__actions">
+        {% include store-badges.html %}
+      </div>
+      <ul class="hero__trust">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Free to download</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> No account</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> No subscriptions</li>
+      </ul>
+    </div>
+
+    <div class="hero__media">
+      {%- if mp4 or webm -%}
+      <div class="phone">
+        <div class="phone__screen">
+          <video autoplay muted loop playsinline preload="metadata"
+                 poster="/assets/screenshots/hero-poster.jpg"
+                 width="600" height="1333" aria-label="Drawwii demo">
+            {%- if webm %}<source src="{{ webm.path | relative_url }}" type="video/webm">{% endif -%}
+            {%- if mp4  %}<source src="{{ mp4.path  | relative_url }}" type="video/mp4">{% endif -%}
+            <img src="/assets/screenshots/01-draw.png" width="600" height="1333" alt="Drawing in Drawwii">
+          </video>
+        </div>
+      </div>
+      {%- else -%}
+      {% include phone.html src="/assets/screenshots/01-draw" alt="The Drawwii drawing editor with a colorful sketch" eager=true %}
+      {%- endif -%}
+    </div>
+  </div>
+</section>

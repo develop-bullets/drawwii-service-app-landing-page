@@ -1,0 +1,16 @@
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section__head section__head--center">
+      <span class="eyebrow">Questions</span>
+      <h2>Frequently asked</h2>
+    </div>
+    <div class="faq">
+      {%- for item in site.data.faq %}
+      <details class="faq__item">
+        <summary>{{ item.q }}</summary>
+        <p>{{ item.a }}</p>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

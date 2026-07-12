@@ -1,0 +1,79 @@
+// Design tokens — CSS custom properties (light + dark)
+//
+// 접근성: seed #DF64A3 은 흰 텍스트 대비 3.29:1 (본문 4.5:1 미달).
+// → seed 는 그라데이션·아이콘·장식 전용. 텍스트/링크/버튼 채움은 --brand-700 (6.06:1 ✓ AA).
+
+:root {
+  color-scheme: light dark;
+
+  // Brand ramp
+  --brand-100: #fce9f2;
+  --brand-200: #f7cce1;
+  --brand-300: #ef9fc7;
+  --brand-500: #df64a3; // seed — 그라데이션/아이콘 전용
+  --brand-600: #c64d8c; // hover
+  --brand-700: #a63a70; // 텍스트·링크·버튼 (흰 글씨 6.06:1)
+  --plum-900:  #5a1f3d; // 그라데이션 종단 = 스토어 자산과 동일
+  --plum-950:  #2e0f1f;
+
+  --grad-brand: linear-gradient(135deg, var(--brand-500) 0%, var(--plum-900) 100%);
+  --grad-brand-soft: linear-gradient(135deg, #e97cb4 0%, #7a2b52 100%);
+
+  // Surfaces / ink — light
+  --bg:       #ffffff;
+  --bg-soft:  #fdf7fa;
+  --surface:  #ffffff;
+  --surface-2:#faf3f7;
+  --border:   #ede3e8;
+  --ink:      #1a1016;
+  --ink-2:    #6b5c64;
+  --accent:   var(--brand-700);
+  --on-brand: #ffffff;
+
+  // Elevation
+  --shadow-1: 0 1px 2px rgba(26, 16, 22, .06), 0 4px 12px rgba(26, 16, 22, .06);
+  --shadow-2: 0 8px 32px rgba(90, 31, 61, .16);
+  --shadow-phone: 0 24px 60px rgba(90, 31, 61, .28);
+
+  // Radii
+  --r-sm:  12px;
+  --r-md:  20px;
+  --r-lg:  28px;
+  --r-pill: 999px;
+
+  // Layout
+  --container: 1120px;
+  --gap: clamp(20px, 4vw, 24px);
+
+  // Type
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:       #150d12;
+    --bg-soft:  #1d1218;
+    --surface:  #221720;
+    --surface-2:#2a1c25;
+    --border:   #3a2a34;
+    --ink:      #f6ecf1;
+    --ink-2:    #b9a5af;
+    --accent:   #f09fc7; // 다크 배경 위 AA
+    --on-brand: #ffffff;
+
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, .4), 0 4px 12px rgba(0, 0, 0, .35);
+    --shadow-2: 0 8px 32px rgba(0, 0, 0, .5);
+    --shadow-phone: 0 24px 60px rgba(0, 0, 0, .55);
+  }
+}
+
+// data-theme 로 강제 오버라이드 (향후 토글 대비 — 뷰어 테마가 이겨야 함)
+:root[data-theme="dark"] {
+  --bg: #150d12; --bg-soft: #1d1218; --surface: #221720; --surface-2: #2a1c25;
+  --border: #3a2a34; --ink: #f6ecf1; --ink-2: #b9a5af; --accent: #f09fc7;
+}
+:root[data-theme="light"] {
+  --bg: #ffffff; --bg-soft: #fdf7fa; --surface: #ffffff; --surface-2: #faf3f7;
+  --border: #ede3e8; --ink: #1a1016; --ink-2: #6b5c64; --accent: #a63a70;
+}
